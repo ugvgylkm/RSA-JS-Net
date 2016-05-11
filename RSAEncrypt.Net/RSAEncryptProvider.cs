@@ -35,6 +35,7 @@ namespace RSAEncrypt.Net
         /// <returns></returns>
         public bool TryDecrypt(string secretStr, out string realValue)
         {
+              realValue=string.Empty;
             try
             {
                 byte[] result = rsa.Decrypt(HexStringToBytes(secretStr), false);
